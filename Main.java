@@ -1,4 +1,5 @@
 import javax.swing.*;
+
 import java.awt.*;
 
 public class Main {
@@ -15,41 +16,47 @@ public class Main {
 
         JLabel title = new JLabel("Contacts");
         title.setBounds(0, 0, 500, 50);
+        title.setBorder(BorderFactory.createEmptyBorder(0, 10, 0, 0));
         title.setFont(new Font("Arial", Font.BOLD, 40));
 
-        JLabel a = new JLabel("A");
-        a.setBounds(0, 0, 500, 50);
-        a.setFont(new Font("Arial", Font.BOLD, 30));
-
-        JLabel b = new JLabel("B");
-        b.setBounds(0, 0, 500, 50);
-        b.setFont(new Font("Arial", Font.BOLD, 30));
-
-        JLabel c = new JLabel("C");
-        c.setBounds(0, 0, 500, 50);
-        c.setFont(new Font("Arial", Font.BOLD, 30));
-
-        JLabel d = new JLabel("D");
-        d.setBounds(0, 0, 500, 50);
-        d.setFont(new Font("Arial", Font.BOLD, 30));
-
-        JLabel e = new JLabel("E");
-        e.setBounds(0, 0, 500, 50);
-        e.setFont(new Font("Arial", Font.BOLD, 30));
-
-        JLabel f = new JLabel("F");
-        f.setBounds(0, 0, 500, 50);
-        f.setFont(new Font("Arial", Font.BOLD, 30));
-
         JPanel panel = new JPanel();
-        new BoxLayout(panel, BoxLayout.Y_AXIS);
+        panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
 
+        int Left = 5;
+        int Top = 10;
+        int Right = 5;
+        int Bot = 10;
+        
+        JLabel a = new JLabel("A");
+        a.setFont(new Font("Arial", Font.BOLD, 30));
+        a.setBorder(BorderFactory.createEmptyBorder(Top, Left, Bot, Right));
         panel.add(a);
+        
+        JLabel b = new JLabel("B");
+        b.setFont(new Font("Arial", Font.BOLD, 30));
+        b.setBorder(BorderFactory.createEmptyBorder(Top, Left, Bot, Right));
         panel.add(b);
+        
+        JLabel c = new JLabel("C");
+        c.setFont(new Font("Arial", Font.BOLD, 30));
+        c.setBorder(BorderFactory.createEmptyBorder(Top, Left, Bot, Right));
         panel.add(c);
+        
+        JLabel d = new JLabel("D");
+        d.setFont(new Font("Arial", Font.BOLD, 30));
+        d.setBorder(BorderFactory.createEmptyBorder(Top, Left, Bot, Right));
         panel.add(d);
+        
+        JLabel e = new JLabel("E");
+        e.setFont(new Font("Arial", Font.BOLD, 30));
+        e.setBorder(BorderFactory.createEmptyBorder(Top, Left, Bot, Right));
         panel.add(e);
+        
+        JLabel f = new JLabel("F");
+        f.setFont(new Font("Arial", Font.BOLD, 30));
+        f.setBorder(BorderFactory.createEmptyBorder(Top, Left, Bot, Right));
         panel.add(f);
+        
 
         JScrollPane scrollPane = new JScrollPane(panel, JScrollPane.VERTICAL_SCROLLBAR_ALWAYS,JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
         scrollPane.setBounds(0, 50, 490, 550);
